@@ -1,0 +1,44 @@
+source "Kconfig.zephyr"
+rsource "../../prstlib/Kconfig"
+
+config PRST_ZB_SLEEP_DURATION_SEC
+	int "Sleep duration between waking up and reading sensors in seconds."
+	default 60
+
+config PRST_ZB_PARENT_POLL_INTERVAL_SEC
+	int "Interval for when b-parasite polls its parent for data in seconds."
+	default 10
+
+config PRST_ZB_BUILD_DATE
+  string "Zigbee basic cluster build date attribute. Max 16 bytes."
+  default ""
+
+config PRST_ZB_MODEL_ID
+  string "Zigbee basic cluster model id attribute. Max 32 bytes."
+  default "b-parasite"
+
+config PRST_ZB_HARDWARE_VERSION
+  int "Zigbee basic cluster hardware version attribute. 1 byte."
+  default BOARD_REVISION_CODE
+
+choice PRST_ZB_FACTORY_RESET_METHOD
+  bool "Factory reset method"
+  default PRST_ZB_FACTORY_RESET_VIA_SW1
+
+config PRST_ZB_FACTORY_RESET_VIA_DOUBLE_RESET
+  bool "Double resetting factory resets the device."
+
+config PRST_ZB_FACTORY_RESET_VIA_RESET_PIN
+  bool "Resetting via the reset pin will factory reset the device. Power cycling through battery replacement will not."
+
+config PRST_ZB_FACTORY_RESET_VIA_SW1
+  bool "Resetting while pressing and holding SW1 for 5 seconds will factory reset the device. Only available on v2.0.0+ hardware revisions."
+
+config PRST_ZB_FACTORY_RESET_DISABLED
+  bool "No factory reset procedure."
+
+endchoice  # PRST_ZB_FACTORY_RESET_METHOD
+
+config PRST_ZB_RESTART_WATCHDOG_TIMEOUT_SEC
+    int "Duration after the device will restart the rejoin procedure if a network has not been successfully joined."
+    default 3600
