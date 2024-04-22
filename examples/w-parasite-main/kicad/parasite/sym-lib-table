@@ -1,0 +1,9 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ht7333-a")(type "Legacy")(uri "/Users/rbaron/dev/homeauto/uc/electronics/libs/kicad-libraries/ht7333-a.lib")(options "")(descr ""))
+  (lib (name "parasite-rescue")(type "KiCad")(uri "${KIPRJMOD}/parasite-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "DW01")(type "Legacy")(uri "/Users/rbaron/dev/homeauto/uc/electronics/parasite/lib/symbols/DW01.lib")(options "")(descr ""))
+  (lib (name "FS8205A")(type "Legacy")(uri "/Users/rbaron/dev/homeauto/uc/electronics/parasite/lib/symbols/FS8205A.lib")(options "")(descr ""))
+  (lib (name "Transistor_FET_Extra")(type "Legacy")(uri "/Users/rbaron/dev/homeauto/uc/electronics/parasite/lib/symbols/Transistor_FET_Extra.lib")(options "")(descr ""))
+  (lib (name "parasite")(type "Legacy")(uri "/Users/rbaron/dev/homeauto/uc/electronics/parasite/lib/symbols/parasite.lib")(options "")(descr ""))
+)
